@@ -13,4 +13,8 @@
     <Folder Include="Repositories\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ITPLibrary.Api.Core\ITPLibrary.Api.Core.csproj" />
+  </ItemGroup>
+
 </Project>
