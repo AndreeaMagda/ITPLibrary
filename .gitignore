@@ -1,1 +1,7 @@
+[Bb]in/
+*.vspxproj.v11.suo
+*.exe
+*.dll
+*.pdb
+*.cache
 /.vs

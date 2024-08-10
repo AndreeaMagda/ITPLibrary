@@ -1,0 +1,16 @@
+D:\itp\ITPLibrary\ITPLibrary.Api.Data\bin\Debug\net8.0\ITPLibrary.Api.Data.deps.json
+D:\itp\ITPLibrary\ITPLibrary.Api.Data\bin\Debug\net8.0\ITPLibrary.Api.Data.dll
+D:\itp\ITPLibrary\ITPLibrary.Api.Data\bin\Debug\net8.0\ITPLibrary.Api.Data.pdb
+D:\itp\ITPLibrary\ITPLibrary.Api.Data\bin\Debug\net8.0\ITPLibrary.Api.Core.dll
+D:\itp\ITPLibrary\ITPLibrary.Api.Data\bin\Debug\net8.0\ITPLibrary.Api.Core.pdb
+D:\itp\ITPLibrary\ITPLibrary.Api.Data\obj\Debug\net8.0\ITPLibrary.Api.Data.csproj.AssemblyReference.cache
+D:\itp\ITPLibrary\ITPLibrary.Api.Data\obj\Debug\net8.0\ITPLibrary.Api.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\itp\ITPLibrary\ITPLibrary.Api.Data\obj\Debug\net8.0\ITPLibrary.Api.Data.AssemblyInfoInputs.cache
+D:\itp\ITPLibrary\ITPLibrary.Api.Data\obj\Debug\net8.0\ITPLibrary.Api.Data.AssemblyInfo.cs
+D:\itp\ITPLibrary\ITPLibrary.Api.Data\obj\Debug\net8.0\ITPLibrary.Api.Data.csproj.CoreCompileInputs.cache
+D:\itp\ITPLibrary\ITPLibrary.Api.Data\obj\Debug\net8.0\ITPLibrary.Api.Data.sourcelink.json
+D:\itp\ITPLibrary\ITPLibrary.Api.Data\obj\Debug\net8.0\ITPLibra.1D97F233.Up2Date
+D:\itp\ITPLibrary\ITPLibrary.Api.Data\obj\Debug\net8.0\ITPLibrary.Api.Data.dll
+D:\itp\ITPLibrary\ITPLibrary.Api.Data\obj\Debug\net8.0\refint\ITPLibrary.Api.Data.dll
+D:\itp\ITPLibrary\ITPLibrary.Api.Data\obj\Debug\net8.0\ITPLibrary.Api.Data.pdb
+D:\itp\ITPLibrary\ITPLibrary.Api.Data\obj\Debug\net8.0\ref\ITPLibrary.Api.Data.dll

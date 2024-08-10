@@ -32,3 +32,7 @@ D:\itp\ITPLibrary\ITPLibrary.Api\obj\Debug\net8.0\refint\ITPLibrary.Api.dll
 D:\itp\ITPLibrary\ITPLibrary.Api\obj\Debug\net8.0\ITPLibrary.Api.pdb
 D:\itp\ITPLibrary\ITPLibrary.Api\obj\Debug\net8.0\ITPLibrary.Api.genruntimeconfig.cache
 D:\itp\ITPLibrary\ITPLibrary.Api\obj\Debug\net8.0\ref\ITPLibrary.Api.dll
+D:\itp\ITPLibrary\ITPLibrary.Api\bin\Debug\net8.0\ITPLibrary.Api.Core.dll
+D:\itp\ITPLibrary\ITPLibrary.Api\bin\Debug\net8.0\ITPLibrary.Api.Data.dll
+D:\itp\ITPLibrary\ITPLibrary.Api\bin\Debug\net8.0\ITPLibrary.Api.Core.pdb
+D:\itp\ITPLibrary\ITPLibrary.Api\bin\Debug\net8.0\ITPLibrary.Api.Data.pdb

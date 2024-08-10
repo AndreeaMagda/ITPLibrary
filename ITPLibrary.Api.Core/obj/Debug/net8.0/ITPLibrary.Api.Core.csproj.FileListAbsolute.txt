@@ -1,0 +1,12 @@
+D:\itp\ITPLibrary\ITPLibrary.Api.Core\bin\Debug\net8.0\ITPLibrary.Api.Core.deps.json
+D:\itp\ITPLibrary\ITPLibrary.Api.Core\bin\Debug\net8.0\ITPLibrary.Api.Core.dll
+D:\itp\ITPLibrary\ITPLibrary.Api.Core\bin\Debug\net8.0\ITPLibrary.Api.Core.pdb
+D:\itp\ITPLibrary\ITPLibrary.Api.Core\obj\Debug\net8.0\ITPLibrary.Api.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\itp\ITPLibrary\ITPLibrary.Api.Core\obj\Debug\net8.0\ITPLibrary.Api.Core.AssemblyInfoInputs.cache
+D:\itp\ITPLibrary\ITPLibrary.Api.Core\obj\Debug\net8.0\ITPLibrary.Api.Core.AssemblyInfo.cs
+D:\itp\ITPLibrary\ITPLibrary.Api.Core\obj\Debug\net8.0\ITPLibrary.Api.Core.csproj.CoreCompileInputs.cache
+D:\itp\ITPLibrary\ITPLibrary.Api.Core\obj\Debug\net8.0\ITPLibrary.Api.Core.sourcelink.json
+D:\itp\ITPLibrary\ITPLibrary.Api.Core\obj\Debug\net8.0\ITPLibrary.Api.Core.dll
+D:\itp\ITPLibrary\ITPLibrary.Api.Core\obj\Debug\net8.0\refint\ITPLibrary.Api.Core.dll
+D:\itp\ITPLibrary\ITPLibrary.Api.Core\obj\Debug\net8.0\ITPLibrary.Api.Core.pdb
+D:\itp\ITPLibrary\ITPLibrary.Api.Core\obj\Debug\net8.0\ref\ITPLibrary.Api.Core.dll
