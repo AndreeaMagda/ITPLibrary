@@ -1,7 +1,149 @@
-[Bb]in/
-*.vspxproj.v11.suo
+# Ignore Visual Studio temporary files, build results, and
+# build directories
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# User-specific files (Mono Auto Generated)
+mono_crash.*
+
+# Auto-generated files
+*.log
+*.obj/
 *.exe
 *.dll
 *.pdb
-*.cache
-/.vs
+*.nupkg
+*.snk
+*.unsuccessfulbuild
+*.build.log
+
+# VS Code directories
+.vscode/
+
+# VS Code extensions
+.vscode/extensions.json
+.vscode/launch.json
+.vscode/settings.json
+
+# Folders for WorkspaceServer
+WorkspaceServer/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Configuration files
+*.config
+*.config.user
+
+# Crash and dump files
+*.dmp
+*.wlog
+
+# SQL Server files
+*.mdf
+*.ldf
+
+# ASP.NET Core
+appsettings*.json
+appsettings*.Development.json
+
+# DotNetCore
+project.lock.json
+project.fragment.lock.json
+artifacts/
+bin/
+obj/
+
+# NuGet
+*.nupkg
+packages/
+# Uncomment if necessary
+# *.nuget/
+# NuGet v3's project.json files produces more ignorable files
+*.nuget/packages.config
+*.nuget/project.json
+
+# Entity Framework
+*.edmx.diagram
+*.edmx.sql
+
+# Microsoft Azure Web App
+*.Publish.xml
+*.pubxml
+*.pubxml.user
+*_i.cspkg
+
+# Publish folder
+*.PublishProfiles/
+*.PublishProfile.*
+
+# IIS
+*.[Cc]onfig
+
+# DotNet5
+.vs/
+
+# Rider
+.idea/
+.idea_modules/
+.idea_dependencies/
+.idea_workspaces/
+.idea_projects/
+.idea_languages/
+.idea_prefs/
+.idea_iml/
+
+# Recycle Bin used by Popular IDEs like Visual Studio
+$RECYCLE.BIN/
+
+# Backup & report files from converting an old project file
+# to a newer Visual Studio version. Backup files are not needed, because
+# we have source control, and we can rely on history.
+_UpgradeReport_Files/
+Backup*/
+UpgradeLog*.XML
+UpgradeLog*.htm
+ServiceFabricBackup/
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used by Popular IDEs like Visual Studio
+$RECYCLE.BIN/
+
+# Windows 8 store app package directories and files
+AppPackages/
+BundleArtifacts/
+Package.StoreAssociation.xml
+_StoreContent.*
+vgs/
+
+# Node.js Modules
+node_modules/
+
+# Mac
+.DS_Store
+*.sublime*
+
+# JetBrains
+.idea/
+*.sublime-*
+
+# ASP.NET Core
+logs/
+appsettings.json
+appsettings*.json
