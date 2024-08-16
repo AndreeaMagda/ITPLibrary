@@ -5,3 +5,4 @@ D:\itp\ITPLibrary\ITPLibrary.Api\obj\Debug\net8.0\ITPLibrary.Api.AssemblyInfo.cs
 D:\itp\ITPLibrary\ITPLibrary.Api\obj\Debug\net8.0\ITPLibrary.Api.csproj.CoreCompileInputs.cache
 D:\itp\ITPLibrary\ITPLibrary.Api\obj\Debug\net8.0\ITPLibrary.Api.MvcApplicationPartsAssemblyInfo.cache
 D:\itp\ITPLibrary\ITPLibrary.Api\obj\Debug\net8.0\ITPLibrary.Api.sourcelink.json
+D:\itp\ITPLibrary\ITPLibrary.Api\obj\Debug\net8.0\ITPLibrary.Api.MvcApplicationPartsAssemblyInfo.cs
