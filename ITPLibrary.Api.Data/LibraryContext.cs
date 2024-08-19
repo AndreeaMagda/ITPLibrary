@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using ITPLibrary.Api.Data.Entities;
+using Microsoft.EntityFrameworkCore;
 
 
 namespace ITPLibrary.Api.Data
@@ -7,9 +8,8 @@ namespace ITPLibrary.Api.Data
     {
         public LibraryContext(DbContextOptions<LibraryContext> options) : base(options)
         {
-
-
-
         }
+
+        public DbSet<Book> Books { get; set; }
     }
-    }
+}
