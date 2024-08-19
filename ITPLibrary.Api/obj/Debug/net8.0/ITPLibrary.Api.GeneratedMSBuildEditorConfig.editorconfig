@@ -17,3 +17,15 @@ build_property.SupportLocalizedComponentNames =
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
 build_property.MSBuildProjectDirectory = D:\itp\ITPLibrary\ITPLibrary.Api
 build_property._RazorSourceGeneratorDebug = 
+
+[D:/itp/ITPLibrary/ITPLibrary.Api/Views/Author/IndexAuthor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aG9yXEluZGV4QXV0aG9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/itp/ITPLibrary/ITPLibrary.Api/Views/Book/IndexBook.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1xJbmRleEJvb2suY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/itp/ITPLibrary/ITPLibrary.Api/Views/Category/IndexCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcSW5kZXhDYXRlZ29yeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
