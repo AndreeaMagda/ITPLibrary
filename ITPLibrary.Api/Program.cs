@@ -9,7 +9,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<LibraryContext>(
-    options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection1")));
+    options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"),
+    b => b.MigrationsAssembly("ITPLibrary.Api.Data")));
+
+
 
 builder.Services.AddAutoMapper(typeof(Program).Assembly);
 var app = builder.Build();
