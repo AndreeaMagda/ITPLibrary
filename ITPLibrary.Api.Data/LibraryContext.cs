@@ -1,4 +1,5 @@
-﻿using ITPLibrary.Api.Data.Entities;
+﻿
+using ITPLibrary.Api.Data.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -12,9 +13,11 @@ namespace ITPLibrary.Api.Data
 {
     public class LibraryContext : DbContext
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
+        public LibraryContext(DbContextOptions<LibraryContext> options) : base(options)
         {
 
 
+
         }
+    }
     }

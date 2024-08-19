@@ -1,6 +1,0 @@
-D:\itp\ITPLibrary\ITPLibrary.Api.Core\obj\Debug\net8.0\ITPLibrary.Api.Core.csproj.AssemblyReference.cache
-D:\itp\ITPLibrary\ITPLibrary.Api.Core\obj\Debug\net8.0\ITPLibrary.Api.Core.GeneratedMSBuildEditorConfig.editorconfig
-D:\itp\ITPLibrary\ITPLibrary.Api.Core\obj\Debug\net8.0\ITPLibrary.Api.Core.AssemblyInfoInputs.cache
-D:\itp\ITPLibrary\ITPLibrary.Api.Core\obj\Debug\net8.0\ITPLibrary.Api.Core.AssemblyInfo.cs
-D:\itp\ITPLibrary\ITPLibrary.Api.Core\obj\Debug\net8.0\ITPLibrary.Api.Core.csproj.CoreCompileInputs.cache
-D:\itp\ITPLibrary\ITPLibrary.Api.Core\obj\Debug\net8.0\ITPLibrary.Api.Core.sourcelink.json
