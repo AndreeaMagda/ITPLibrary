@@ -29,7 +29,7 @@ namespace ITPLibrary.Api.Core.Profiles
                 Title = bookDto.Title,
                 AuthorId = bookDto.AuthorId,
              
-                CategoryId = bookDto.CategoryId
+                CategoryId =bookDto.CategoryId
             };
         }
     }

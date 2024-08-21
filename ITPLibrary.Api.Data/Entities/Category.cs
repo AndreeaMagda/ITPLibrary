@@ -8,5 +8,9 @@ namespace ITPLibrary.Api.Data.Entities
         public int Id { get; set; }
         public string Name { get; set; }
 
+        public static implicit operator Category(string v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
