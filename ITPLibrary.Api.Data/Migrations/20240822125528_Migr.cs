@@ -5,7 +5,7 @@
 namespace ITPLibrary.Api.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class seedddd : Migration
+    public partial class Migr : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
