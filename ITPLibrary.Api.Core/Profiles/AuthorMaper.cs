@@ -1,28 +1,15 @@
-﻿using ITPLibrary.Api.Core.Dtos;
+﻿using AutoMapper;
+using ITPLibrary.Api.Core.Dtos;
 using ITPLibrary.Api.Data.Entities;
-
 
 namespace ITPLibrary.Api.Core.Profiles
 {
-    public class AuthorMaper
+    public class AuthorMapper : Profile
     {
-        public AuthorDto ToDto(Author author)
+        public AuthorMapper()
         {
-            return new AuthorDto()
-            {
-                Id = author.Id,
-                Name = author.Name
-                
-            };
-        }
-
-        public Author ToEntity(AuthorDto authorDto)
-        {
-            return new Author()
-            {
-                Id = authorDto.Id,
-                Name = authorDto.Name
-            };
+            CreateMap<Author, AuthorDto>();
+            CreateMap<AuthorDto, Author>();
         }
     }
 }

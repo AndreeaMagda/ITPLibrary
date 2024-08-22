@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ITPLibrary.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+32b4211aca4b2e735f14f0db993917da280912c2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+df0fcb36bc1756ff4a815e53953bf545c6f45160")]
 [assembly: System.Reflection.AssemblyProductAttribute("ITPLibrary.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ITPLibrary.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

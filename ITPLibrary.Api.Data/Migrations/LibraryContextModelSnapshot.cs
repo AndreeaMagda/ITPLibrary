@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ITPLibrary.Api.Data.Migrations
 {
-    [DbContext(typeof(LibraryContext))]
+    [DbContext(typeof(ApplicationDbContext))]
     partial class LibraryContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
@@ -38,20 +38,6 @@ namespace ITPLibrary.Api.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Authors");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Description = "British author",
-                            Name = "J K Rowling"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Description = "American author",
-                            Name = "Stephen King"
-                        });
                 });
 
             modelBuilder.Entity("ITPLibrary.Api.Data.Entities.Book", b =>
@@ -78,22 +64,6 @@ namespace ITPLibrary.Api.Data.Migrations
                     b.HasIndex("CategoryId");
 
                     b.ToTable("Books");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            AuthorId = 1,
-                            CategoryId = 1,
-                            Title = "Harry Potter and the Chamber of Secrets"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            AuthorId = 2,
-                            CategoryId = 1,
-                            Title = "The Shining"
-                        });
                 });
 
             modelBuilder.Entity("ITPLibrary.Api.Data.Entities.Category", b =>
@@ -111,30 +81,18 @@ namespace ITPLibrary.Api.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Categories");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Name = "Fiction"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Name = "Non-Fiction"
-                        });
                 });
 
             modelBuilder.Entity("ITPLibrary.Api.Data.Entities.Book", b =>
                 {
                     b.HasOne("ITPLibrary.Api.Data.Entities.Author", "Author")
-                        .WithMany()
+                        .WithMany("Books")
                         .HasForeignKey("AuthorId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("ITPLibrary.Api.Data.Entities.Category", "Category")
-                        .WithMany()
+                        .WithMany("Books")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -142,6 +100,16 @@ namespace ITPLibrary.Api.Data.Migrations
                     b.Navigation("Author");
 
                     b.Navigation("Category");
+                });
+
+            modelBuilder.Entity("ITPLibrary.Api.Data.Entities.Author", b =>
+                {
+                    b.Navigation("Books");
+                });
+
+            modelBuilder.Entity("ITPLibrary.Api.Data.Entities.Category", b =>
+                {
+                    b.Navigation("Books");
                 });
 #pragma warning restore 612, 618
         }
