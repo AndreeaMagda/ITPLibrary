@@ -1,6 +1,8 @@
 
+using ITPLibrary.Api.Core.Profiles;
 using ITPLibrary.Api.Core.Services;
 using ITPLibrary.Api.Data;
+using ITPLibrary.Api.Data.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -18,12 +20,15 @@ builder.Services.AddDbContext<ApplicationDbContext>(
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddScoped<IBookService, BookService>();
+builder.Services.AddScoped<IBookRepository, BookRepository>();
 builder.Services.AddAutoMapper(typeof(Program).Assembly);
 
 builder.Services.AddControllers();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddAutoMapper(typeof(BookMapper));
 
 var app = builder.Build();
 
