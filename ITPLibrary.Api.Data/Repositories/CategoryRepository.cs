@@ -13,6 +13,9 @@ namespace ITPLibrary.Api.Data.Repositories
         Task AddCategoryAsync(Category category);
         Task<Category> GetCategoryByIdAsync(int id);
         Task<IEnumerable<Category>> GetAllCategoriesAsync();
+        Task UpdateCategoryAsync(Category category);
+        Task DeleteCategoryAsync(int id);
+
     }
     public class CategoryRepository: ICategoryRepository
     {
@@ -36,6 +39,21 @@ namespace ITPLibrary.Api.Data.Repositories
         public async Task<IEnumerable<Category>> GetAllCategoriesAsync()
         {
             return await _context.Categories.ToListAsync();
+        }
+        public async Task UpdateCategoryAsync(Category category)
+        {
+            _context.Categories.Update(category);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task DeleteCategoryAsync(int id)
+        {
+            var category = await _context.Categories.FindAsync(id);
+            if (category != null)
+            {
+                _context.Categories.Remove(category);
+                await _context.SaveChangesAsync();
+            }
         }
     }
 }

@@ -50,5 +50,28 @@ namespace ITPLibrary.Api.Controllers
             var categories = await _categoryService.GetAllCategoriesAsync();
             return Ok(categories);
         }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateCategory(int id, [FromBody] CategoryDto categoryDto)
+        {
+            if (id != categoryDto.Id)
+            {
+                return BadRequest("Category ID mismatch");
+            }
+
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            await _categoryService.UpdateCategoryAsync(categoryDto);
+            return NoContent();
+        }
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteCategory(int id)
+        {
+            await _categoryService.DeleteCategoryAsync(id);
+            return NoContent();
+        }
     }
 }

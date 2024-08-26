@@ -16,6 +16,8 @@ namespace ITPLibrary.Api.Core.Services
         Task<CategoryDto> AddCategoryAsync(CategoryDto categoryDto);
         Task<CategoryDto> GetCategoryByIdAsync(int id);
         Task<IEnumerable<CategoryDto>> GetAllCategoriesAsync();
+        Task UpdateCategoryAsync(CategoryDto categoryDto);
+        Task DeleteCategoryAsync(int id);
     }
     public class CategoryService:ICategoryService
     {
@@ -45,6 +47,17 @@ namespace ITPLibrary.Api.Core.Services
         {
             var categories = await _categoryRepository.GetAllCategoriesAsync();
             return _mapper.Map<IEnumerable<CategoryDto>>(categories);
+        }
+
+        public async Task UpdateCategoryAsync(CategoryDto categoryDto)
+        {
+            var category = _mapper.Map<Category>(categoryDto);
+            await _categoryRepository.UpdateCategoryAsync(category);
+        }
+
+        public async Task DeleteCategoryAsync(int id)
+        {
+            await _categoryRepository.DeleteCategoryAsync(id);
         }
     }
 }
