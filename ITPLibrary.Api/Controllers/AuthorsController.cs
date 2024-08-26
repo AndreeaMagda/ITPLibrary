@@ -50,7 +50,29 @@ namespace ITPLibrary.Api.Controllers
 
             return Ok(author);
         }
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateAuthor(int id, [FromBody] AuthorDto authorDto)
+        {
+            if (id != authorDto.Id)
+            {
+                return BadRequest("Author ID mismatch");
+            }
 
-        
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            await _authorService.UpdateAuthorAsync(authorDto);
+            return NoContent();
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteAuthor(int id)
+        {
+            await _authorService.DeleteAuthorAsync(id);
+            return NoContent();
+        }
+
     }
 }
