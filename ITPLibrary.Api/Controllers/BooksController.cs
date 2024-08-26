@@ -52,5 +52,28 @@ namespace ITPLibrary.Api.Controllers
 
             return Ok(book);
         }
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateBook(int id, [FromBody] BookDto bookDto)
+        {
+            if (id != bookDto.Id)
+            {
+                return BadRequest("Book ID mismatch");
+            }
+
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            await _bookService.UpdateBookAsync(bookDto);
+            return NoContent();
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteBook(int id)
+        {
+            await _bookService.DeleteBookAsync(id);
+            return NoContent();
+        }
     }
 }

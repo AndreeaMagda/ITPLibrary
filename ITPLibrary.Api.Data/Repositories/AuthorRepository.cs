@@ -14,7 +14,8 @@ namespace ITPLibrary.Api.Data.Repositories
         Task AddAuthorAsync(Author author);
         Task<IEnumerable<Author>> GetAllAuthorsAsync();
         Task<Author> GetAuthorByIdAsync(int id);
-
+        Task UpdateAuthorAsync(Author author);
+        Task DeleteAuthorAsync(int id);
 
     }
     public class AuthorRepository: IAuthorRepository
@@ -40,6 +41,22 @@ namespace ITPLibrary.Api.Data.Repositories
         public async Task<Author> GetAuthorByIdAsync(int id)
         {
             return await _context.Authors.FindAsync(id);
+        }
+
+        public async Task UpdateAuthorAsync(Author author)
+        {
+            _context.Authors.Update(author);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task DeleteAuthorAsync(int id)
+        {
+            var author = await _context.Authors.FindAsync(id);
+            if (author != null)
+            {
+                _context.Authors.Remove(author);
+                await _context.SaveChangesAsync();
+            }
         }
     }
 }

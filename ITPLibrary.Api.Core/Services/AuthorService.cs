@@ -16,6 +16,8 @@ namespace ITPLibrary.Api.Core.Services
         Task<AuthorDto> AddAuthorAsync(AuthorDto authorDto);
         Task<AuthorDto> GetAuthorByIdAsync(int id);
         Task<IEnumerable<AuthorDto>> GetAllAuthorsAsync();
+        Task UpdateAuthorAsync(AuthorDto authorDto);
+        Task DeleteAuthorAsync(int id);
 
     }
     public class AuthorService: IAuthorService
@@ -49,7 +51,16 @@ namespace ITPLibrary.Api.Core.Services
             return _mapper.Map<AuthorDto>(author);
         }
 
+        public async Task UpdateAuthorAsync(AuthorDto authorDto)
+        {
+            var author = _mapper.Map<Author>(authorDto);
+            await _authorRepository.UpdateAuthorAsync(author);
+        }
 
+        public async Task DeleteAuthorAsync(int id)
+        {
+            await _authorRepository.DeleteAuthorAsync(id);
+        }
 
     }
 }

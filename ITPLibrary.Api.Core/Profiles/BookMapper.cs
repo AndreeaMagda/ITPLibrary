@@ -9,8 +9,8 @@ namespace ITPLibrary.Api.Core.Profiles
         public BookMapper()
         {
             CreateMap<Book, BookDto>()
-                .ForMember(dest => dest.AuthorName, opt => opt.MapFrom(src => src.Author.Name))
-                .ForMember(dest => dest.CategoryName, opt => opt.MapFrom(src => src.Category.Name));
+                .ForMember(dest => dest.AuthorId, opt => opt.MapFrom(src => src.Author.Id))
+                .ForMember(dest => dest.CategoryId, opt => opt.MapFrom(src => src.Category.Id));
 
             CreateMap<BookDto, Book>();
         }

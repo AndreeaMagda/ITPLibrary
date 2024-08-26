@@ -15,6 +15,8 @@ namespace ITPLibrary.Api.Core.Services
         Task<IEnumerable<BookDto>> GetAllBooksAsync();
         Task AddBookAsync(BookDto bookDto);
         Task<BookDto> GetBookByIdAsync(int id);
+        Task UpdateBookAsync(BookDto bookDto);
+        Task DeleteBookAsync(int id);
     }
 
     public class BookService : IBookService
@@ -45,6 +47,20 @@ namespace ITPLibrary.Api.Core.Services
             var book = await _bookRepository.GetBookByIdAsync(id);
             return _mapper.Map<BookDto>(book);
         }
+
+
+        public async Task UpdateBookAsync(BookDto bookDto)
+        {
+            var book = _mapper.Map<Book>(bookDto);
+            await _bookRepository.UpdateBookAsync(book);
+        }
+
+        public async Task DeleteBookAsync(int id)
+        {
+            await _bookRepository.DeleteBookAsync(id);
+        }
+
+
     }
 
 }

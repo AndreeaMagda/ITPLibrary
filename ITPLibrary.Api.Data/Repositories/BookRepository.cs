@@ -14,6 +14,8 @@ namespace ITPLibrary.Api.Data.Repositories
         Task AddBookAsync(Book book);
         Task<Book> GetBookByIdAsync(int id);
         Task<IEnumerable<Book>> GetAllBooksAsync();
+        Task UpdateBookAsync(Book book);
+        Task DeleteBookAsync(int id);
     }
     public class BookRepository : IBookRepository
     {
@@ -40,6 +42,22 @@ namespace ITPLibrary.Api.Data.Repositories
         public async Task<IEnumerable<Book>> GetAllBooksAsync()
         {
             return await _context.Books.ToListAsync(); 
+        }
+
+        public async Task UpdateBookAsync(Book book)
+        {
+            _context.Books.Update(book);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task DeleteBookAsync(int id)
+        {
+            var book = await _context.Books.FindAsync(id);
+            if (book != null)
+            {
+                _context.Books.Remove(book);
+                await _context.SaveChangesAsync();
+            }
         }
     }
 
