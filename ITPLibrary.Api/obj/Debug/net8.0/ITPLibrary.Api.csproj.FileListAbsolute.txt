@@ -145,3 +145,4 @@ D:\itp\ITPLibrary\ITPLibrary.Api\obj\Debug\net8.0\ITPLibrary.Api.RazorAssemblyIn
 D:\itp\ITPLibrary\ITPLibrary.Api\obj\Debug\net8.0\ITPLibrary.Api.RazorAssemblyInfo.cs
 D:\itp\ITPLibrary\ITPLibrary.Api\bin\Debug\net8.0\ITPLibrary.Api.Core.dll
 D:\itp\ITPLibrary\ITPLibrary.Api\bin\Debug\net8.0\ITPLibrary.Api.Core.pdb
+D:\itp\ITPLibrary\ITPLibrary.Api\bin\Debug\net8.0\Dapper.dll
