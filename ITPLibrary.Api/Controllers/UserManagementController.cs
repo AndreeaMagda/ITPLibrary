@@ -35,5 +35,24 @@ namespace ITPLibrary.Api.Controllers
                 return StatusCode(409, ex.Message);
             }
         }
+
+        [HttpPost("login")]
+        public async Task<IActionResult> Login([FromBody] LoginUserDto userLoginDto)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            try
+            {
+                var user = await _userService.LoginUserAsync(userLoginDto);
+                return Ok(new { Message = "Login successful", User = user });
+            }
+            catch (UnauthorizedAccessException ex)
+            {
+                return Unauthorized(ex.Message);
+            }
+        }
     }
 }
