@@ -3,6 +3,8 @@ using ITPLibrary.Api.Core.Dtos;
 using ITPLibrary.Api.Core.Services;
 using ITPLibrary.Api.Data.Entities;
 using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace ITPLibrary.Api.Controllers
@@ -28,28 +30,53 @@ namespace ITPLibrary.Api.Controllers
                 return BadRequest(ModelState);
             }
 
-            await _authorService.AddAuthorAsync(authorDto);
-            return CreatedAtAction(nameof(GetAuthorById), new { id = authorDto.Id }, authorDto);
+            try
+            {
+                var createdAuthor = await _authorService.AddAuthorAsync(authorDto);
+                return CreatedAtAction(nameof(GetAuthorById), new { id = createdAuthor.Id }, createdAuthor);
+            }
+            catch (Exception ex)
+            {
+                // Log the exception (ex) here if needed
+                return StatusCode(500, "An error occurred while adding the author.");
+            }
         }
 
         [HttpGet]
         public async Task<ActionResult<IEnumerable<AuthorDto>>> GetAllAuthors()
         {
-            var authors = await _authorService.GetAllAuthorsAsync();
-            return Ok(authors);
+            try
+            {
+                var authors = await _authorService.GetAllAuthorsAsync();
+                return Ok(authors);
+            }
+            catch (Exception ex)
+            {
+                // Log the exception (ex) here if needed
+                return StatusCode(500, "An error occurred while retrieving the authors.");
+            }
         }
 
         [HttpGet("{id}")]
         public async Task<ActionResult<AuthorDto>> GetAuthorById(int id)
         {
-            var author = await _authorService.GetAuthorByIdAsync(id);
-            if (author == null)
+            try
             {
-                return NotFound();
-            }
+                var author = await _authorService.GetAuthorByIdAsync(id);
+                if (author == null)
+                {
+                    return NotFound();
+                }
 
-            return Ok(author);
+                return Ok(author);
+            }
+            catch (Exception ex)
+            {
+                
+                return StatusCode(500, "An error occurred while retrieving the author.");
+            }
         }
+
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateAuthor(int id, [FromBody] AuthorDto authorDto)
         {
@@ -63,16 +90,31 @@ namespace ITPLibrary.Api.Controllers
                 return BadRequest(ModelState);
             }
 
-            await _authorService.UpdateAuthorAsync(authorDto);
-            return NoContent();
+            try
+            {
+                await _authorService.UpdateAuthorAsync(authorDto);
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                // Log the exception (ex) here if needed
+                return StatusCode(500, "An error occurred while updating the author.");
+            }
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteAuthor(int id)
         {
-            await _authorService.DeleteAuthorAsync(id);
-            return NoContent();
+            try
+            {
+                await _authorService.DeleteAuthorAsync(id);
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                // Log the exception (ex) here if needed
+                return StatusCode(500, "An error occurred while deleting the author.");
+            }
         }
-
     }
 }

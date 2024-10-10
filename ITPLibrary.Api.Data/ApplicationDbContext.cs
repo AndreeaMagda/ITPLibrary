@@ -22,6 +22,10 @@ namespace ITPLibrary.Api.Data
                 .WithMany(a => a.Books)
                 .HasForeignKey(b => b.AuthorId);
 
+            modelBuilder.Entity<Author>()
+                .Property(a => a.Id)
+                .ValueGeneratedOnAdd();
+
             modelBuilder.Entity<Book>()
                 .HasOne(b => b.Category)
                 .WithMany(c => c.Books)

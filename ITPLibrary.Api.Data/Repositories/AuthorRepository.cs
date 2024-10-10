@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 
 namespace ITPLibrary.Api.Data.Repositories
 {
-
     public interface IAuthorRepository
     {
         Task AddAuthorAsync(Author author);
@@ -16,9 +15,9 @@ namespace ITPLibrary.Api.Data.Repositories
         Task<Author> GetAuthorByIdAsync(int id);
         Task UpdateAuthorAsync(Author author);
         Task DeleteAuthorAsync(int id);
-
     }
-    public class AuthorRepository: IAuthorRepository
+
+    public class AuthorRepository : IAuthorRepository
     {
         private readonly ApplicationDbContext _context;
 
@@ -29,6 +28,7 @@ namespace ITPLibrary.Api.Data.Repositories
 
         public async Task AddAuthorAsync(Author author)
         {
+            // Ensure AuthorId is not set explicitly
             _context.Authors.Add(author);
             await _context.SaveChangesAsync();
         }
